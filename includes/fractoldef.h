@@ -24,6 +24,9 @@
 # define MANDELBROTCL "./fractals/celticmandelbrot.cl"
 # define CELTICH "./fractals/celticheart.cl"
 # define BUFFALO "./fractals/buffalo.cl"
+# define KEY1 "color.txt"
+# define KEY2 "color1.txt"
+# define KEY3 "color2.txt"
 
 double	map(double current, double end, double new_start, double new_end);
 double	ft_abs(double value);

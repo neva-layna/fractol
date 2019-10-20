@@ -86,9 +86,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/nlayna/Desktop/fractol/fractals/fractol.hcl">
-			<Option target="fractol"/>
-		</Unit>
 		<Unit filename="/Users/nlayna/Desktop/fractol/fractals/julia.cl">
 			<Option target="fractol"/>
 		</Unit>

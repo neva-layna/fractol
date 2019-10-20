@@ -12,24 +12,39 @@
 
 #include "fractol.h"
 
-int	main(int ac, char **av)
+static int 	ft_usage(void)
+{
+	ft_putendl("Usage: ./fractol <fractal>\n"
+			   "*   mandelbrot\n*   julia\n*   burning ship (bs)\n*   mandelbar"
+			   "\n*   buffalo\n*   celtic heart (celtich)"
+			   "\n*   celtic mandelbrot (mandelbrotcl)"
+			   "\n*   mandelbrot heart (mandelbroth)");
+	return (0);
+}
+
+static void	start_point(char *str)
 {
 	t_mlx *mlx;
 
 	mlx = NULL;
-	if (ac < 2 || parse(av[1]) < 0)
-	{
-		ft_putendl("Usage: ./fractol <fractal>\n"
-"*   mandelbrot\n*   julia\n*   burning ship (bs)\n*   mandelbar"
-"\n*   buffalo\n*   celtic heart (celtich)"
-"\n*   celtic mandelbrot (mandelbrotcl)"
-"\n*   mandelbrot heart (mandelbroth)");
-		return (0);
-	}
-	mlx = init(mlx, av[1]);
+	mlx = init(mlx, str);
 	set_args(mlx);
 	render(mlx);
 	controls_key(mlx);
 	mlx_loop(mlx->ptr);
+}
+
+int			main(int ac, char **av)
+{
+	int i;
+
+	i = 1;
+	while (i < ac)
+	{
+		if (parse(av[i]) < 0)
+			return (ft_usage());
+		start_point(av[i]);
+		i++;
+	}
 	return (0);
 }

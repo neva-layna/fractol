@@ -65,7 +65,8 @@ char					*reader(char *str);
 void					color_reader(t_mlx *mlx, char *c_str);
 void					controls_key(t_mlx *mlx);
 void					def_pos(t_mlx *mlx);
-void					change_color(t_mlx *mlx, char *str);
+void					change_color(t_mlx *mlx, int key);
 int						parse(char *av);
+void					arrow_move(t_mlx *mlx, int key);
 
 #endif

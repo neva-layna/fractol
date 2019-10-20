@@ -54,19 +54,18 @@ static int			key_press(int key, void *param)
 		def_pos(mlx);
 	if (key == 257)
 		mlx->pos = mlx->pos == 1 ? 0 : 1;
-	if (key == 18)
-		change_color(mlx, "color.txt");
-	if (key == 19)
-		change_color(mlx, "color1.txt");
-	if (key == 20)
-		change_color(mlx, "color2.txt");
+	if (key >= 18 && key <= 20)
+		change_color(mlx, key);
 	if (key == 69 || key == 78)
 	{
 		sign = key == 69 ? 1 : -1;
 		mlx->maxiter += sign;
-		set_args(mlx);
+		mlx->ret = clSetKernelArg(mlx->kernel, 5, sizeof(int),
+				(const void *)&(mlx->maxiter));
 		render(mlx);
 	}
+	if (key >= 123 && key <= 126)
+		arrow_move(mlx, key);
 	return (0);
 }
 
