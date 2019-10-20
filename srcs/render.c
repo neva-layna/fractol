@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   render.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nlayna <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/21 19:16:14 by nlayna            #+#    #+#             */
-/*   Updated: 2019/07/21 19:16:16 by nlayna           ###   ########.fr       */
+/*   Created: 2019/10/20 07:25:30 by nlayna            #+#    #+#             */
+/*   Updated: 2019/10/20 07:25:55 by nlayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-int	main(void)
+void	render(t_mlx *mlx)
 {
-	t_mlx *mlx;
-
-	mlx = NULL;
-	mlx = init(mlx);
-	set_args(mlx);
-	render(mlx);
-	controls_key(mlx);
-	mlx_loop(mlx->ptr);
-	return (0);
+	mlx->ret = clEnqueueNDRangeKernel(mlx->cq, mlx->kernel, 1, NULL,
+			mlx->gws, NULL, 0, NULL, NULL);
+	mlx->ret = clEnqueueReadBuffer(mlx->cq, mlx->buf, CL_TRUE, 0,
+			mlx->length * sizeof(float), mlx->data, 0, NULL, NULL);
+	mlx_put_image_to_window(mlx->ptr, mlx->win, mlx->img, 0, 0);
 }

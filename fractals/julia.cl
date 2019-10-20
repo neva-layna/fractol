@@ -3,7 +3,7 @@
 double map(double current, double end, double new_start, double new_end) {
 	return (current / end * (new_end - new_start) + new_start);
 }
-__kernel void render(__global int *out, double x_min, double y_min, double x_max, double y_max, double xp, double yp, int maxiter, __global int *color)
+__kernel void render(__global int *out, double x_min, double y_min, double x_max, double y_max, int maxiter, __global int *color, double xp, double yp)
 {
 	int i = get_global_id(0) / WIDTH;
 	int j = get_global_id(0) % WIDTH;

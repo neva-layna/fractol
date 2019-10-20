@@ -2,19 +2,19 @@
 double map(double current, double end, double new_start, double new_end) {
 	return (current / end * (new_end - new_start) + new_start);
 }
-__kernel void render(__global int * out, double x_min, double y_min, double x_max, double y_max)
+__kernel void render(__global int * out, double x_min, double y_min, double x_max, double y_max, int max_iter, __global int *color)
 {
-    int i = get_global_id(0) / 1920;
-    int j = get_global_id(0) % 1920;
-    double x_z = map(j, 1920, x_min, x_max);
-    double y_z = map(i, 1080, y_min, y_max);
+    int i = get_global_id(0) / WIDTH;
+    int j = get_global_id(0) % WIDTH;
+    double x_z = map(j, WIDTH, x_min, x_max);
+    double y_z = map(i, HEIGHT, y_min, y_max);
     double x = x_z;
     double y = y_z;
     int iter = 0;
     double xx = 0;
     double yy = 0;
     double twoXY;
-    while (xx + yy <= 4 && iter < 1000)
+    while (xx + yy <= 4 && iter < max_iter)
     {
         xx = x * x;
         yy = y * y;
@@ -23,8 +23,8 @@ __kernel void render(__global int * out, double x_min, double y_min, double x_ma
         y = twoXY + y_z;
         iter++;
     }
-    if (iter == 1000)
-        out[i * 1920 + j] = 0;
+    if (iter == max_iter)
+        out[i * WIDTH + j] = 0;
     else
-        out[i * 1920 + j] = iter % 256;
+        out[i * WIDTH + j] = color[iter % 256];
 }

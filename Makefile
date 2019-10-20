@@ -19,8 +19,8 @@ MLXDIR	:= ./mlx/
 LIBINC	:= ./libft/includes/
 HEADER  := $(INCDIR)fractol.h $(INCDIR)fractoldef.h
 
-SRCS	:= main.c
-OBJ		:= main.o
+SRCS	:= main.c init.c render.c args.c reader.c utils.c hook.c
+OBJ		:= main.o init.o render.o args.o reader.o utils.o hook.o
 LIB		:= ./libft/libft.a \
 			./mlx/libmlx.a
 
