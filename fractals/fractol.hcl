@@ -14,13 +14,15 @@
 # define FRACTOL_H
 
 # include "libft.h"
-# include "fractoldef.h"
 # include "mlx.h"
 # include <math.h>
 # include <fcntl.h>
 # include <OpenCL/opencl.h>
 # include <stdio.h>
 
+# define WIDTH 1920
+# define HEIGHT 1080
+# define HCL "-I./includes/"
 typedef struct			s_mlx
 {
 	void				*ptr;
@@ -39,7 +41,6 @@ typedef struct			s_mlx
 	cl_program 			program;
 	cl_kernel 			kernel;
 	cl_mem 				buf;
-	cl_mem 				color_buf;
 	int 				length;
 	size_t 				gws[1];
 	double				x_min;
@@ -49,9 +50,4 @@ typedef struct			s_mlx
 	double				dwin;
 	double 				xp;
 	double 				yp;
-	int 				pos;
-	int 				color[256];
-	int 				maxiter;
-}						t_mlx;
-
-#endif
+	int

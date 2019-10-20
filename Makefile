@@ -17,6 +17,7 @@ INCDIR	:= ./includes/
 LIBDIR	:= ./libft/
 MLXDIR	:= ./mlx/
 LIBINC	:= ./libft/includes/
+HEADER  := $(INCDIR)fractol.h $(INCDIR)fractoldef.h
 
 SRCS	:= main.c
 OBJ		:= main.o
@@ -37,7 +38,7 @@ $(NAME): $(OBJ) $(LIB)
 $(LIB):
 	make -C $(LIBDIR)
 
-%.o: $(SRCDIR)%.c
+%.o: $(SRCDIR)%.c $(HEADER)
 	$(CC) $(CFLAGS) -I $(LIBINC) -I $(INCDIR) -c $< -o $@
 
 clean:
