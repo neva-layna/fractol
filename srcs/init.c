@@ -67,7 +67,6 @@ static void	cl_init(t_mlx *mlx)
 			0, &(mlx->ret));
 	mlx->program = clCreateProgramWithSource(mlx->context, 1,
 			(const char **)&(mlx->sourcecode), NULL, &(mlx->ret));
-
 	mlx->ret = clBuildProgram(mlx->program, 1, &(mlx->device_id),
 			HCL, NULL, NULL);
 	mlx->kernel = clCreateKernel(mlx->program, "render", &(mlx->ret));
