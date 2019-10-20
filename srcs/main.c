@@ -19,7 +19,8 @@ int	main(int ac, char **av)
 	mlx = NULL;
 	if (ac < 2 || parse(av[1]) < 0)
 	{
-		ft_putendl("Usage: ./fractol <fractal>\n*   mandelbrot\n*   julia\n*   burning ship(bs)");
+		ft_putendl("Usage: ./fractol <fractal>\n"
+"*   mandelbrot\n*   julia\n*   burning ship(bs)\n*   mandelbar");
 		return (0);
 	}
 	mlx = init(mlx, av[1]);

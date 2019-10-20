@@ -13,7 +13,7 @@
 #include "fractol.h"
 #include "fractoldef.h"
 
-static void f_init(t_mlx *mlx, char *av)
+static void	f_init(t_mlx *mlx, char *av)
 {
 	if (parse(av) == 1)
 		mlx->sourcecode = reader(MANDELBROT);
@@ -21,6 +21,16 @@ static void f_init(t_mlx *mlx, char *av)
 		mlx->sourcecode = reader(JULIA);
 	else if (parse(av) == 3)
 		mlx->sourcecode = reader(BS);
+	else if (parse(av) == 4)
+		mlx->sourcecode = reader(MANDELBAR);
+	else if (parse(av) == 5)
+		mlx->sourcecode = reader(MANDELBROTH);
+	else if (parse(av) == 6)
+		mlx->sourcecode = reader(MANDELBROTCL);
+	else if (parse(av) == 7)
+		mlx->sourcecode = reader(CELTICH);
+	else if (parse(av) == 8)
+		mlx->sourcecode = reader(BUFFALO);
 }
 
 static void	g_init(t_mlx *mlx)
@@ -57,6 +67,7 @@ static void	cl_init(t_mlx *mlx)
 			0, &(mlx->ret));
 	mlx->program = clCreateProgramWithSource(mlx->context, 1,
 			(const char **)&(mlx->sourcecode), NULL, &(mlx->ret));
+
 	mlx->ret = clBuildProgram(mlx->program, 1, &(mlx->device_id),
 			HCL, NULL, NULL);
 	mlx->kernel = clCreateKernel(mlx->program, "render", &(mlx->ret));

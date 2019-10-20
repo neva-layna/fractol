@@ -7,7 +7,6 @@ include_directories(includes)
 include_directories(libft/includes)
 
 add_executable(fractol
-        fractals/fractol.hcl
         fractals/julia.cl
         fractals/mandelbrot.cl
         includes/fractol.h

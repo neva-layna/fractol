@@ -12,7 +12,7 @@
 
 #include "fractol.h"
 
-int 				parse(char *av)
+int					parse(char *av)
 {
 	if (ft_strcmp(av, "mandelbrot") == 0)
 		return (1);
@@ -20,6 +20,16 @@ int 				parse(char *av)
 		return (2);
 	else if (ft_strcmp(av, "bs") == 0)
 		return (3);
+	else if (ft_strcmp(av, "mandelbar") == 0)
+		return (4);
+	else if (ft_strcmp(av, "mandelbroth") == 0)
+		return (5);
+	else if (ft_strcmp(av, "mandelbrotcl") == 0)
+		return (6);
+	else if (ft_strcmp(av, "celtich") == 0)
+		return (7);
+	else if (ft_strcmp(av, "buffalo") == 0)
+		return (8);
 	return (-1);
 }
 
