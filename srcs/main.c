@@ -6,19 +6,19 @@
 /*   By: nlayna <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/21 19:16:14 by nlayna            #+#    #+#             */
-/*   Updated: 2019/10/20 20:57:01 by nlayna           ###   ########.fr       */
+/*   Updated: 2019/10/20 21:17:13 by nlayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-static int 	ft_usage(void)
+static int	ft_usage(void)
 {
 	ft_putendl("Usage: ./fractol <fractal>\n"
-			   "*   mandelbrot\n*   julia\n*   burning ship (bs)\n*   mandelbar"
-			   "\n*   buffalo\n*   celtic heart (celtich)"
-			   "\n*   celtic mandelbrot (mandelbrotcl)"
-			   "\n*   mandelbrot heart (mandelbroth)");
+"*   mandelbrot\n*   julia\n*   burning ship (bs)\n*   mandelbar"
+"\n*   buffalo\n*   celtic heart (celtich)"
+"\n*   celtic mandelbrot (mandelbrotcl)"
+"\n*   mandelbrot heart (mandelbroth)");
 	return (0);
 }
 
@@ -36,9 +36,8 @@ static void	start_point(char *str)
 
 int			main(int ac, char **av)
 {
-
 	if (ac < 2 || parse(av[1]) < 0)
-			return (ft_usage());
+		return (ft_usage());
 	start_point(av[1]);
 	return (0);
 }
