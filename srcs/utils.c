@@ -12,6 +12,17 @@
 
 #include "fractol.h"
 
+int 				parse(char *av)
+{
+	if (ft_strcmp(av, "mandelbrot") == 0)
+		return (1);
+	else if (ft_strcmp(av, "julia") == 0)
+		return (2);
+	else if (ft_strcmp(av, "bs") == 0)
+		return (3);
+	return (-1);
+}
+
 void				change_color(t_mlx *mlx, char *str)
 {
 	color_reader(mlx, str);

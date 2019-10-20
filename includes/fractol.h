@@ -54,11 +54,11 @@ typedef struct			s_mlx
 	int 				maxiter;
 }						t_mlx;
 
-t_mlx					*init(t_mlx *mlx);
+t_mlx					*init(t_mlx *mlx, char *av);
 void					color_reader(t_mlx *mlx, char *c_str);
 char 					*reader(char *str);
 void 					render(t_mlx *mlx);
-void 					set_args(t_mlx *mlx);
+void					set_args(t_mlx *mlx);
 void					move_args(t_mlx *mlx);
 void					zoom_args(t_mlx *mlx);
 char					*reader(char *str);
@@ -66,5 +66,6 @@ void					color_reader(t_mlx *mlx, char *c_str);
 void					controls_key(t_mlx *mlx);
 void					def_pos(t_mlx *mlx);
 void					change_color(t_mlx *mlx, char *str);
+int 					parse(char *av);
 
 #endif

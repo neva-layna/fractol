@@ -69,7 +69,13 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/nlayna/Desktop/fractol/libft/src/ft_tolower.c" "/Users/nlayna/Desktop/fractol/cmake-build-debug/CMakeFiles/fractol.dir/libft/src/ft_tolower.c.o"
   "/Users/nlayna/Desktop/fractol/libft/src/ft_toupper.c" "/Users/nlayna/Desktop/fractol/cmake-build-debug/CMakeFiles/fractol.dir/libft/src/ft_toupper.c.o"
   "/Users/nlayna/Desktop/fractol/libft/src/get_next_line.c" "/Users/nlayna/Desktop/fractol/cmake-build-debug/CMakeFiles/fractol.dir/libft/src/get_next_line.c.o"
+  "/Users/nlayna/Desktop/fractol/srcs/args.c" "/Users/nlayna/Desktop/fractol/cmake-build-debug/CMakeFiles/fractol.dir/srcs/args.c.o"
+  "/Users/nlayna/Desktop/fractol/srcs/hook.c" "/Users/nlayna/Desktop/fractol/cmake-build-debug/CMakeFiles/fractol.dir/srcs/hook.c.o"
+  "/Users/nlayna/Desktop/fractol/srcs/init.c" "/Users/nlayna/Desktop/fractol/cmake-build-debug/CMakeFiles/fractol.dir/srcs/init.c.o"
   "/Users/nlayna/Desktop/fractol/srcs/main.c" "/Users/nlayna/Desktop/fractol/cmake-build-debug/CMakeFiles/fractol.dir/srcs/main.c.o"
+  "/Users/nlayna/Desktop/fractol/srcs/reader.c" "/Users/nlayna/Desktop/fractol/cmake-build-debug/CMakeFiles/fractol.dir/srcs/reader.c.o"
+  "/Users/nlayna/Desktop/fractol/srcs/render.c" "/Users/nlayna/Desktop/fractol/cmake-build-debug/CMakeFiles/fractol.dir/srcs/render.c.o"
+  "/Users/nlayna/Desktop/fractol/srcs/utils.c" "/Users/nlayna/Desktop/fractol/cmake-build-debug/CMakeFiles/fractol.dir/srcs/utils.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

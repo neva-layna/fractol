@@ -7,7 +7,11 @@ include_directories(includes)
 include_directories(libft/includes)
 
 add_executable(fractol
+        fractals/fractol.hcl
+        fractals/julia.cl
+        fractals/mandelbrot.cl
         includes/fractol.h
+        includes/fractoldef.h
         libft/includes/get_next_line.h
         libft/includes/libft.h
         libft/src/ft_aff_a.c
@@ -76,4 +80,10 @@ add_executable(fractol
         libft/src/ft_toupper.c
         libft/src/get_next_line.c
         mlx/libmlx.a
-        srcs/main.c includes/fractoldef.h)
+        srcs/args.c
+        srcs/hook.c
+        srcs/init.c
+        srcs/main.c
+        srcs/reader.c
+        srcs/render.c
+        srcs/utils.c)

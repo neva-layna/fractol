@@ -64,7 +64,13 @@ file(REMOVE_RECURSE
   "CMakeFiles/fractol.dir/libft/src/ft_tolower.c.o"
   "CMakeFiles/fractol.dir/libft/src/ft_toupper.c.o"
   "CMakeFiles/fractol.dir/libft/src/get_next_line.c.o"
+  "CMakeFiles/fractol.dir/srcs/args.c.o"
+  "CMakeFiles/fractol.dir/srcs/hook.c.o"
+  "CMakeFiles/fractol.dir/srcs/init.c.o"
   "CMakeFiles/fractol.dir/srcs/main.c.o"
+  "CMakeFiles/fractol.dir/srcs/reader.c.o"
+  "CMakeFiles/fractol.dir/srcs/render.c.o"
+  "CMakeFiles/fractol.dir/srcs/utils.c.o"
   "fractol"
   "fractol.pdb"
 )

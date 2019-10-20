@@ -16,6 +16,9 @@
 # define WIDTH 1920
 # define HEIGHT 1080
 # define HCL "-I includes/"
+# define MANDELBROT "./fractals/mandelbrot.cl"
+# define JULIA "./fractals/julia.cl"
+# define BS "./fractals/bs.cl"
 
 double map(double current, double end, double new_start, double new_end);
 

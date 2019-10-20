@@ -13,6 +13,16 @@
 #include "fractol.h"
 #include "fractoldef.h"
 
+static void f_init(t_mlx *mlx, char *av)
+{
+	if (parse(av) == 1)
+		mlx->sourcecode = reader(MANDELBROT);
+	else if (parse(av) == 2)
+		mlx->sourcecode = reader(JULIA);
+	else if (parse(av) == 3)
+		mlx->sourcecode = reader(BS);
+}
+
 static void	g_init(t_mlx *mlx)
 {
 	mlx->ptr = mlx_init();
@@ -45,7 +55,6 @@ static void	cl_init(t_mlx *mlx)
 			NULL, NULL, &(mlx->ret));
 	mlx->cq = clCreateCommandQueue(mlx->context, mlx->device_id,
 			0, &(mlx->ret));
-	mlx->sourcecode = reader("./fractals/mandelbrot.cl");
 	mlx->program = clCreateProgramWithSource(mlx->context, 1,
 			(const char **)&(mlx->sourcecode), NULL, &(mlx->ret));
 	mlx->ret = clBuildProgram(mlx->program, 1, &(mlx->device_id),
@@ -60,11 +69,12 @@ static void	cl_init(t_mlx *mlx)
 	mlx->gws[0] = WIDTH * HEIGHT;
 }
 
-t_mlx		*init(t_mlx *mlx)
+t_mlx		*init(t_mlx *mlx, char *av)
 {
 	mlx = (t_mlx *)malloc(sizeof(t_mlx));
 	g_init(mlx);
 	v_init(mlx);
+	f_init(mlx, av);
 	cl_init(mlx);
 	return (mlx);
 }

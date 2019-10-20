@@ -1878,6 +1878,87 @@ libft/src/get_next_line.c.s:
 	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/libft/src/get_next_line.c.s
 .PHONY : libft/src/get_next_line.c.s
 
+srcs/args.o: srcs/args.c.o
+
+.PHONY : srcs/args.o
+
+# target to build an object file
+srcs/args.c.o:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/srcs/args.c.o
+.PHONY : srcs/args.c.o
+
+srcs/args.i: srcs/args.c.i
+
+.PHONY : srcs/args.i
+
+# target to preprocess a source file
+srcs/args.c.i:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/srcs/args.c.i
+.PHONY : srcs/args.c.i
+
+srcs/args.s: srcs/args.c.s
+
+.PHONY : srcs/args.s
+
+# target to generate assembly for a file
+srcs/args.c.s:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/srcs/args.c.s
+.PHONY : srcs/args.c.s
+
+srcs/hook.o: srcs/hook.c.o
+
+.PHONY : srcs/hook.o
+
+# target to build an object file
+srcs/hook.c.o:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/srcs/hook.c.o
+.PHONY : srcs/hook.c.o
+
+srcs/hook.i: srcs/hook.c.i
+
+.PHONY : srcs/hook.i
+
+# target to preprocess a source file
+srcs/hook.c.i:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/srcs/hook.c.i
+.PHONY : srcs/hook.c.i
+
+srcs/hook.s: srcs/hook.c.s
+
+.PHONY : srcs/hook.s
+
+# target to generate assembly for a file
+srcs/hook.c.s:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/srcs/hook.c.s
+.PHONY : srcs/hook.c.s
+
+srcs/init.o: srcs/init.c.o
+
+.PHONY : srcs/init.o
+
+# target to build an object file
+srcs/init.c.o:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/srcs/init.c.o
+.PHONY : srcs/init.c.o
+
+srcs/init.i: srcs/init.c.i
+
+.PHONY : srcs/init.i
+
+# target to preprocess a source file
+srcs/init.c.i:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/srcs/init.c.i
+.PHONY : srcs/init.c.i
+
+srcs/init.s: srcs/init.c.s
+
+.PHONY : srcs/init.s
+
+# target to generate assembly for a file
+srcs/init.c.s:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/srcs/init.c.s
+.PHONY : srcs/init.c.s
+
 srcs/main.o: srcs/main.c.o
 
 .PHONY : srcs/main.o
@@ -1904,6 +1985,87 @@ srcs/main.s: srcs/main.c.s
 srcs/main.c.s:
 	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/srcs/main.c.s
 .PHONY : srcs/main.c.s
+
+srcs/reader.o: srcs/reader.c.o
+
+.PHONY : srcs/reader.o
+
+# target to build an object file
+srcs/reader.c.o:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/srcs/reader.c.o
+.PHONY : srcs/reader.c.o
+
+srcs/reader.i: srcs/reader.c.i
+
+.PHONY : srcs/reader.i
+
+# target to preprocess a source file
+srcs/reader.c.i:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/srcs/reader.c.i
+.PHONY : srcs/reader.c.i
+
+srcs/reader.s: srcs/reader.c.s
+
+.PHONY : srcs/reader.s
+
+# target to generate assembly for a file
+srcs/reader.c.s:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/srcs/reader.c.s
+.PHONY : srcs/reader.c.s
+
+srcs/render.o: srcs/render.c.o
+
+.PHONY : srcs/render.o
+
+# target to build an object file
+srcs/render.c.o:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/srcs/render.c.o
+.PHONY : srcs/render.c.o
+
+srcs/render.i: srcs/render.c.i
+
+.PHONY : srcs/render.i
+
+# target to preprocess a source file
+srcs/render.c.i:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/srcs/render.c.i
+.PHONY : srcs/render.c.i
+
+srcs/render.s: srcs/render.c.s
+
+.PHONY : srcs/render.s
+
+# target to generate assembly for a file
+srcs/render.c.s:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/srcs/render.c.s
+.PHONY : srcs/render.c.s
+
+srcs/utils.o: srcs/utils.c.o
+
+.PHONY : srcs/utils.o
+
+# target to build an object file
+srcs/utils.c.o:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/srcs/utils.c.o
+.PHONY : srcs/utils.c.o
+
+srcs/utils.i: srcs/utils.c.i
+
+.PHONY : srcs/utils.i
+
+# target to preprocess a source file
+srcs/utils.c.i:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/srcs/utils.c.i
+.PHONY : srcs/utils.c.i
+
+srcs/utils.s: srcs/utils.c.s
+
+.PHONY : srcs/utils.s
+
+# target to generate assembly for a file
+srcs/utils.c.s:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/srcs/utils.c.s
+.PHONY : srcs/utils.c.s
 
 # Help Target
 help:
@@ -2109,9 +2271,27 @@ help:
 	@echo "... libft/src/get_next_line.o"
 	@echo "... libft/src/get_next_line.i"
 	@echo "... libft/src/get_next_line.s"
+	@echo "... srcs/args.o"
+	@echo "... srcs/args.i"
+	@echo "... srcs/args.s"
+	@echo "... srcs/hook.o"
+	@echo "... srcs/hook.i"
+	@echo "... srcs/hook.s"
+	@echo "... srcs/init.o"
+	@echo "... srcs/init.i"
+	@echo "... srcs/init.s"
 	@echo "... srcs/main.o"
 	@echo "... srcs/main.i"
 	@echo "... srcs/main.s"
+	@echo "... srcs/reader.o"
+	@echo "... srcs/reader.i"
+	@echo "... srcs/reader.s"
+	@echo "... srcs/render.o"
+	@echo "... srcs/render.i"
+	@echo "... srcs/render.s"
+	@echo "... srcs/utils.o"
+	@echo "... srcs/utils.i"
+	@echo "... srcs/utils.s"
 .PHONY : help
 
 
