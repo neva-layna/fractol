@@ -6,7 +6,7 @@
 /*   By: nlayna <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/21 19:16:14 by nlayna            #+#    #+#             */
-/*   Updated: 2019/07/21 19:16:16 by nlayna           ###   ########.fr       */
+/*   Updated: 2019/10/20 20:57:01 by nlayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,15 +36,9 @@ static void	start_point(char *str)
 
 int			main(int ac, char **av)
 {
-	int i;
 
-	i = 1;
-	while (i < ac)
-	{
-		if (parse(av[i]) < 0)
+	if (ac < 2 || parse(av[1]) < 0)
 			return (ft_usage());
-		start_point(av[i]);
-		i++;
-	}
+	start_point(av[1]);
 	return (0);
 }
