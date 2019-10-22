@@ -41,13 +41,11 @@ static int		line_filler(char *str, char **line)
 
 int				get_next_line(const int fd, char **line)
 {
-	static char		*buf[10000];
+	static char		buf[10000][BUFF_SIZE];
 
 	if (fd < 0 || fd > 10000 || line == NULL ||
 			BUFF_SIZE <= 0 || read(fd, buf[fd], 0) < 0)
 		return (-1);
-	if (!buf[fd])
-		buf[fd] = ft_strnew(BUFF_SIZE);
 	*line = ft_strnew(0);
 	if (*buf[fd])
 		if (line_filler(buf[fd], line))

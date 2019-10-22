@@ -1,7 +1,7 @@
 from PIL import Image
 import numpy
 
-im = Image.open('color3.png')
+im = Image.open('color6.png')
 im = im.convert('RGB')
 pixels = list(im.getdata())
 
@@ -13,5 +13,5 @@ while (i < 256):
     string = string.split(",")
     color = ((int(string[0]) & 0x0FF) << 16) | ((int(string[1]) & 0x0FF) << 8) | ((int(string[2]) & 0x0FF))
     res = str(color)
-    print(res, file=open("color.txt", "a"))
+    print(res, file=open("color5.txt", "a"))
     i += 1

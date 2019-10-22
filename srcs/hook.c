@@ -42,7 +42,7 @@ static int			mouse_hook(int button, int x, int y, void *param)
 	return (0);
 }
 
-static int			key_press(int key, void *param)
+int					key_press(int key, void *param)
 {
 	t_mlx	*mlx;
 	int		sign;
@@ -54,7 +54,7 @@ static int			key_press(int key, void *param)
 		def_pos(mlx);
 	if (key == 257)
 		mlx->pos = mlx->pos == 1 ? 0 : 1;
-	if (key >= 18 && key <= 20)
+	if (key >= 18 && key <= 23)
 		change_color(mlx, key);
 	if (key == 69 || key == 78)
 	{

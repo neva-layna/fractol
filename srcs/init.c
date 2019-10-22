@@ -6,7 +6,7 @@
 /*   By: nlayna <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/20 06:32:18 by nlayna            #+#    #+#             */
-/*   Updated: 2019/10/20 06:32:20 by nlayna           ###   ########.fr       */
+/*   Updated: 2019/10/20 21:20:29 by nlayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ static void	v_init(t_mlx *mlx)
 	mlx->yp = 0;
 	mlx->pos = 0;
 	mlx->maxiter = 256;
-	color_reader(mlx, "color.txt");
+	color_reader(mlx, KEY1);
 }
 
 static void	cl_init(t_mlx *mlx)
@@ -72,16 +72,17 @@ static void	cl_init(t_mlx *mlx)
 	mlx->kernel = clCreateKernel(mlx->program, "render", &(mlx->ret));
 	mlx->buf = NULL;
 	mlx->length = WIDTH * HEIGHT;
-	mlx->buf = clCreateBuffer(mlx->context, CL_MEM_READ_WRITE,
-			mlx->length * sizeof(cl_int), NULL, &(mlx->ret));
-	mlx->color_buf = clCreateBuffer(mlx->context, CL_MEM_READ_WRITE |
+	mlx->buf = clCreateBuffer(mlx->context, CL_MEM_READ_WRITE |
+	CL_MEM_USE_HOST_PTR, mlx->length * sizeof(cl_int), mlx->data, &(mlx->ret));
+	mlx->color_buf = clCreateBuffer(mlx->context, CL_MEM_READ_ONLY |
 	CL_MEM_USE_HOST_PTR, 256 * sizeof(int), mlx->color, &(mlx->ret));
 	mlx->gws[0] = WIDTH * HEIGHT;
 }
 
 t_mlx		*init(t_mlx *mlx, char *av)
 {
-	mlx = (t_mlx *)malloc(sizeof(t_mlx));
+	if (!(mlx = (t_mlx *)malloc(sizeof(t_mlx))))
+		exit(0);
 	g_init(mlx);
 	v_init(mlx);
 	f_init(mlx, av);

@@ -25,7 +25,7 @@ __kernel void render(__global int *out, double x_min, double y_min, double x_max
 		iter++;
 	}
 	if (iter == maxiter)
-		out[i * WIDTH + j] = 0;
+		out[i * WIDTH + j] = color[256];
 	else
 		out[i * WIDTH + j] = color[iter % 256];
 }

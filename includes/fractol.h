@@ -68,5 +68,6 @@ void					def_pos(t_mlx *mlx);
 void					change_color(t_mlx *mlx, int key);
 int						parse(char *av);
 void					arrow_move(t_mlx *mlx, int key);
+int						key_press(int key, void *param);
 
 #endif

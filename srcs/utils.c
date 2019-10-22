@@ -41,8 +41,14 @@ void				change_color(t_mlx *mlx, int key)
 		color_reader(mlx, KEY2);
 	if (key == 20)
 		color_reader(mlx, KEY3);
-	mlx->color_buf = clCreateBuffer(mlx->context, CL_MEM_READ_WRITE |
-	CL_MEM_USE_HOST_PTR, 256 * sizeof(int), mlx->color, &(mlx->ret));
+	if (key == 21)
+		color_reader(mlx, KEY4);
+	if (key == 22)
+		color_reader(mlx, KEY5);
+	if (key == 23)
+		color_reader(mlx, KEY6);
+	mlx->ret = clEnqueueWriteBuffer(mlx->cq, mlx->color_buf, CL_TRUE, 0,
+	256 * sizeof(int), mlx->color, 0, NULL, NULL);
 	mlx->ret = clSetKernelArg(mlx->kernel, 6,
 			sizeof(mlx->color_buf), &(mlx->color_buf));
 	render(mlx);

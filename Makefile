@@ -25,7 +25,7 @@ LIB		:= ./libft/libft.a \
 			./mlx/libmlx.a
 
 CC		:= gcc
-CFLAGS	:= -Wall -Wextra -Werror
+CFLAGS	:= -Wall -Wextra -Werror -g
 MLXF	:= -L $(MLXDIR) -lmlx -I $(MLXDIR) -framework OpenGL -framework Appkit -framework OpenCL
 
 .PHONY: all clean fclean re

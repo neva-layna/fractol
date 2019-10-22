@@ -27,7 +27,7 @@ SRC		:= ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c
 OBJ		:= $(addprefix ./,$(SRC:.c=.o))
 
 CC		:= gcc
-CFLAGS	:= -Wall -Wextra -Werror
+CFLAGS	:= -Wall -Wextra -Werror -g
 
 .PHONY: all clean fclean re
 
