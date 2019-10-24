@@ -13,8 +13,8 @@
 #ifndef FRACTOLDEF_H
 # define FRACTOLDEF_H
 
-# define WIDTH 2000
-# define HEIGHT 1440
+# define WIDTH 1920
+# define HEIGHT 1080
 # define HCL "-I includes/"
 # define MANDELBROT "./fractals/mandelbrot.cl"
 # define JULIA "./fractals/julia.cl"

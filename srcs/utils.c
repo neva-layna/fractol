@@ -35,9 +35,6 @@ int					parse(char *av)
 
 void				change_color(t_mlx *mlx, int key)
 {
-	clReleaseMemObject(mlx->color_buf);
-	mlx->color_buf = clCreateBuffer(mlx->context, CL_MEM_READ_ONLY |
-	CL_MEM_USE_HOST_PTR, 256 * sizeof(int), mlx->color, &(mlx->ret));
 	if (key == 18)
 		color_reader(mlx, KEY1);
 	if (key == 19)

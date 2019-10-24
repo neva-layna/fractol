@@ -25,6 +25,7 @@ void	color_reader(t_mlx *mlx, char *c_str)
 		mlx->color[++i] = ft_atoi(color_fd);
 		free(color_fd);
 	}
+	close(fd);
 	free(color_fd);
 }
 
