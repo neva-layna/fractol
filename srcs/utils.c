@@ -6,7 +6,7 @@
 /*   By: nlayna <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/20 07:47:31 by nlayna            #+#    #+#             */
-/*   Updated: 2019/10/20 07:47:37 by nlayna           ###   ########.fr       */
+/*   Updated: 2019/10/24 12:52:01 by nlayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,9 @@ int					parse(char *av)
 
 void				change_color(t_mlx *mlx, int key)
 {
+	clReleaseMemObject(mlx->color_buf);
+	mlx->color_buf = clCreateBuffer(mlx->context, CL_MEM_READ_ONLY |
+	CL_MEM_USE_HOST_PTR, 256 * sizeof(int), mlx->color, &(mlx->ret));
 	if (key == 18)
 		color_reader(mlx, KEY1);
 	if (key == 19)

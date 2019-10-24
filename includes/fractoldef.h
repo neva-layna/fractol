@@ -6,15 +6,15 @@
 /*   By: nlayna <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/19 04:03:10 by nlayna            #+#    #+#             */
-/*   Updated: 2019/10/19 04:03:29 by nlayna           ###   ########.fr       */
+/*   Updated: 2019/10/23 17:14:09 by nlayna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FRACTOLDEF_H
 # define FRACTOLDEF_H
 
-# define WIDTH 1920
-# define HEIGHT 1080
+# define WIDTH 2000
+# define HEIGHT 1440
 # define HCL "-I includes/"
 # define MANDELBROT "./fractals/mandelbrot.cl"
 # define JULIA "./fractals/julia.cl"

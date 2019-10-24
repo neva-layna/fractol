@@ -36,7 +36,7 @@ static void	start_point(char *str)
 
 int			main(int ac, char **av)
 {
-	if (ac < 2 || parse(av[1]) < 0)
+	if (ac != 2 || parse(av[1]) < 0)
 		return (ft_usage());
 	start_point(av[1]);
 	return (0);

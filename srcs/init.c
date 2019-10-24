@@ -36,7 +36,7 @@ static void	f_init(t_mlx *mlx, char *av)
 static void	g_init(t_mlx *mlx)
 {
 	mlx->ptr = mlx_init();
-	mlx->win = mlx_new_window(mlx->ptr, WIDTH, HEIGHT, "text");
+	mlx->win = mlx_new_window(mlx->ptr, WIDTH, HEIGHT, "Fractol");
 	mlx->img = mlx_new_image(mlx->ptr, WIDTH, HEIGHT);
 	mlx->data = (int *)mlx_get_data_addr(mlx->img, &(mlx->bpp),
 			&(mlx->size), &(mlx->end));
